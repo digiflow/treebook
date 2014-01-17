@@ -8,13 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-header">
 		<div class="container">
-			<a class="navbar-brand" href="#">Treebook</a>
+			<a class="brand" href="#">PixShare</a>
 			<ul class="nav navbar-nav">
-				<li><%= link_to "All Statuses", statuses_path %>
-				</li>
+				<li><%= link_to "All Statuses", statuses_path %></li>
+			</ul>
+			<ul class="nav pull-right">
+				<% if user_signed_in? %>
+					<li ><%= link_to current_user.full_name, edit_user_registration_path %> </li>
+					<li ><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
+				<% else %>
+					<li ><%= link_to "Sign Up", new_user_registration_path %> </li>
+					<li ><%= link_to "Sign In", new_user_session_path %> </li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
@@ -23,6 +31,7 @@
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 	<%= yield %>
+	
 </div>
 </body>
 </html>
