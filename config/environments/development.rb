@@ -6,6 +6,7 @@ Treebook::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
 
@@ -34,4 +35,5 @@ Treebook::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
 end

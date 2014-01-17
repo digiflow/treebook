@@ -4,6 +4,7 @@
   <title>Treebook</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,6 +20,8 @@
 	</div>
 </div>
 <div class="container">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 	<%= yield %>
 </div>
 </body>
