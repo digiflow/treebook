@@ -1,5 +1,5 @@
 class StatusesController < ApplicationController
-  before_filter :authenticate_user!, only: [:new]
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
 
   # GET /statuses
   # GET /statuses.json
@@ -42,7 +42,7 @@ class StatusesController < ApplicationController
   # POST /statuses
   # POST /statuses.json
   def create
-    @status = Status.new(params[:status])
+    @status =  Status.new(params[:status])
 
     respond_to do |format|
       if @status.save
