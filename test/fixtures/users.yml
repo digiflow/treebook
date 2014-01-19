@@ -3,3 +3,10 @@ arkadiusz:
   first_name: "Arkadiusz"
   email: "arek@monkbrain.com"
   last_name: "Platek"
+
+
+jim:
+  profile_name: 'jimhoskins'
+  first_name: "Jim"
+  email: "jim@jim.pl"
+  last_name: "Hoskins"
