@@ -1,9 +1,9 @@
 arkadiusz:		
   profile_name: 'Monkbrain'
   first_name: "Arkadiusz"
-  email: "arek@monkbrain.com"
+  email: "arek@example.com"
   last_name: "Platek"
-
+  encrypted_password: "$2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq"
 
 jim:
   profile_name: 'jimhoskins'
@@ -11,8 +11,16 @@ jim:
   email: "jim@jim.pl"
   last_name: "Hoskins"
 
+
 mike:
   first_name: "Mike"
   last_name: "The Frog"
   email: "mike@teamtreehouse.com"
   profile_name: "mikethefrog"
+
+blocked_friend:
+  first_name: 'Blocked'
+  last_name: 'Friend'
+  email: 'blocked@mail.com'
+  profile_name: 'youblockedme'
+
